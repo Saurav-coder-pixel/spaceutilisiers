@@ -1,17 +1,7 @@
 /* ===================================================================
    SPACE UTILIZERS — Contact Form Handler (TypeScript)
-   EmailJS integration, validation, honeypot spam protection
+   Validation, honeypot spam protection, and direct inquiry submission
    =================================================================== */
-
-/** EmailJS global — loaded via CDN script tag in contact.html */
-declare const emailjs: {
-  init(publicKey: string): void;
-  send(
-    serviceId: string,
-    templateId: string,
-    templateParams: Record<string, string>
-  ): Promise<{ status: number; text: string }>;
-};
 
 /** Shape of the contact form submission data */
 interface ContactFormData {
@@ -162,34 +152,30 @@ async function handleSubmit(e: Event): Promise<void> {
   submitBtn.textContent = 'Sending...';
 
   try {
-    // ============================================================
-    // EmailJS Integration
-    // Replace these with your actual EmailJS credentials:
-    //   1. Sign up at https://www.emailjs.com/
-    //   2. Create a service (e.g., Gmail)
-    //   3. Create a template with variables:
-    //      {{name}}, {{email}}, {{phone}}, {{service}}, {{message}}
-    //   4. Replace the IDs below
-    // ============================================================
-
-    if (typeof emailjs !== 'undefined') {
-      // Send main email to studio
-      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-        from_name: formData.name,
-        from_email: formData.email,
+    const response = await fetch('https://formsubmit.co/ajax/hello@spaceutilizers.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
         phone: formData.phone,
         service: formData.service,
         message: formData.message,
-        to_email: 'sura767848@gmail.com',
-      });
+        _subject: `New inquiry from ${formData.name}`,
+        _captcha: 'false',
+        _template: 'table',
+      }),
+    });
 
-      // Send auto-reply to submitter (optional — create a second template)
-      // await emailjs.send(
-      //   'YOUR_SERVICE_ID',
-      //   'YOUR_AUTOREPLY_TEMPLATE_ID',
-      //   { to_name: formData.name, to_email: formData.email }
-      // );
+    if (!response.ok) {
+      throw new Error('Submission failed');
     }
+
+    const autoReplyMailto = `mailto:${formData.email}?subject=We received your inquiry&body=Hello%20${encodeURIComponent(formData.name)},%0D%0A%0D%0AThank%20you%20for%20reaching%20out%20to%20Space%20Utilizers.%20Our%20team%20will%20get%20back%20to%20you%20within%2024%20hours.`;
+    window.open(autoReplyMailto, '_blank', 'noopener,noreferrer');
 
     showStatus(
       statusEl,
