@@ -1,0 +1,17 @@
+{
+  "name": "space-utilizers",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Space Utilizers — Premium Interior Design & Architecture Studio",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0"
+  }
+}
