@@ -77,17 +77,54 @@
           </div>
         </div>
 
-        <!-- Email -->
-        <div class="contact-info-item">
-          <div class="contact-info-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        <form id="contact-form" class="reveal" novalidate>
+          <!-- Honeypot -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
           </div>
-          <div class="contact-info-text">
-            <h4>Email Us</h4>
-            <a href="mailto:mayankorai1200@gmail.com">mayankorai1200@gmail.com</a>
-            <p>We respond within 24 hours</p>
+
+          <div class="form-group">
+            <label for="name">Full Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required aria-required="true">
+            <div class="form-error">This field is required.</div>
           </div>
-        </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" required aria-required="true">
+            <div class="form-error">Please enter a valid email address.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 99999 99999" required aria-required="true">
+            <div class="form-error">Please enter a valid phone number.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Interested Service</label>
+            <select id="service" name="service" class="form-control">
+              <option value="" disabled selected>Select a service</option>
+              <option value="Space Planning">Space Planning</option>
+              <option value="Interior Styling">Interior Styling</option>
+              <option value="Architectural Consultation">Architectural Consultation</option>
+              <option value="Renovation & Remodeling">Renovation & Remodeling</option>
+              <option value="Commercial Fit-Out">Commercial Fit-Out</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message <span class="required">*</span></label>
+            <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project, space, or any questions you have..." required aria-required="true"></textarea>
+            <div class="form-error">This field is required.</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit" style="width: 100%;">Send Query</button>
+
+          <div id="form-status" class="form-status"></div>
+        </form>
 
         <!-- Studio Address -->
         <div class="contact-info-item">
