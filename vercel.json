@@ -1,0 +1,28 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "buildCommand": "npm run build && cd server && npm install && npm run build",
+  "outputDirectory": "dist",
+  "public": true,
+  "functions": {
+    "api/contact.js": {
+      "includeFiles": "server/dist/**"
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/contact",
+      "headers": [
+        { "key": "Access-Control-Allow-Credentials", "value": "false" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET,POST,OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type,Accept,X-Requested-With" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/api/contact", "destination": "/api/contact.js" },
+    { "source": "/((?!api/).*)", "destination": "/$1" }
+  ]
+}
