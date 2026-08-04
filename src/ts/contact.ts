@@ -152,7 +152,7 @@ async function handleSubmit(e: Event): Promise<void> {
   submitBtn.textContent = 'Sending...';
 
   try {
-    const response = await fetch('https://formsubmit.co/ajax/hello@spaceutilizers.com', {
+    const response = await fetch('https://formsubmit.co/ajax/mayankorai1200@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
