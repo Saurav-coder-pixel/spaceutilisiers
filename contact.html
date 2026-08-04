@@ -7,13 +7,6 @@
   <title>Contact Us — Space Utilizers</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
-  <!-- EmailJS SDK — Replace YOUR_PUBLIC_KEY with your actual EmailJS public key -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>
-    (function() {
-      emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS Public Key
-    })();
-  </script>
 </head>
 <body>
 
@@ -72,63 +65,9 @@
           </div>
           <div class="contact-info-text">
             <h4>Call Us</h4>
-            <a href="tel:+919999999999">+91 99999 99999</a>
+            <a href="tel:+9198">+91 98715 43683</a>
             <p>Mon – Sat, 10:00 AM – 7:00 PM</p>
           </div>
-        </div>
-
-        <!-- Email -->
-        <div class="contact-info-item">
-          <div class="contact-info-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          </div>
-          <div class="contact-info-text">
-            <h4>Email Us</h4>
-            <a href="mailto:hello@spaceutilizers.com">hello@spaceutilizers.com</a>
-            <p>We respond within 24 hours</p>
-          </div>
-        </div>
-
-        <!-- Studio Address -->
-        <div class="contact-info-item">
-          <div class="contact-info-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          </div>
-          <div class="contact-info-text">
-            <h4>Visit Our Studio</h4>
-            <p>Studio 204, Design Quarter<br>Sector 18, Gurugram 122001<br>Haryana, India</p>
-          </div>
-        </div>
-
-        <!-- Social -->
-        <div class="contact-info-item">
-          <div class="contact-info-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-          </div>
-          <div class="contact-info-text">
-            <h4>Follow Us</h4>
-            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
-            <br>
-            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Google Maps -->
-      <div class="map-container reveal" style="margin-bottom: var(--space-4xl);">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.0!2d77.07!3d28.49!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI5JzI0LjAiTiA3N8KwMDQnMTIuMCJF!5e0!3m2!1sen!2sin!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Space Utilizers Studio Location"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONTACT FORM ===== -->
-  <section class="section-alt" id="contact-form-section">
-    <div class="container">
-      <div style="max-width: 700px; margin: 0 auto;">
-        <div class="reveal" style="text-align: center; margin-bottom: var(--space-3xl);">
-          <p class="eyebrow text-gold-glow-subtle" style="justify-content: center;">Send a Query</p>
-          <h2>Tell Us About<br><span class="serif-italic text-gold-glow">Your Space</span></h2>
-          <p style="margin: var(--space-md) auto 0;">Fill out the form below and our design team will reach out within 24 hours to discuss your project.</p>
         </div>
 
         <form id="contact-form" class="reveal" novalidate>
@@ -157,28 +96,64 @@
           </div>
 
           <div class="form-group">
-            <label for="service">Interested Service</label>
-            <select id="service" name="service" class="form-control">
-              <option value="" disabled selected>Select a service</option>
-              <option value="Space Planning">Space Planning</option>
-              <option value="Interior Styling">Interior Styling</option>
+            <label for="subject">Subject / Query Type <span class="required">*</span></label>
+            <select id="subject" name="subject" class="form-control" required aria-required="true">
+              <option value="" disabled selected>Select a query type</option>
+              <option value="Space Planning Consultation">Space Planning Consultation</option>
+              <option value="Interior Styling Project">Interior Styling Project</option>
               <option value="Architectural Consultation">Architectural Consultation</option>
-              <option value="Renovation & Remodeling">Renovation & Remodeling</option>
+              <option value="Renovation &amp; Remodeling">Renovation &amp; Remodeling</option>
               <option value="Commercial Fit-Out">Commercial Fit-Out</option>
+              <option value="Landscape Design">Landscape Design</option>
+              <option value="Furniture Inquiry">Furniture Inquiry</option>
+              <option value="General Query">General Query</option>
               <option value="Other">Other</option>
             </select>
+            <div class="form-error">Please select a subject / query type.</div>
           </div>
 
           <div class="form-group">
             <label for="message">Your Message <span class="required">*</span></label>
-            <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project, space, or any questions you have..." required aria-required="true"></textarea>
-            <div class="form-error">This field is required.</div>
+            <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project, space, timeline, or any questions you have..." required aria-required="true" rows="5"></textarea>
+            <div class="form-error">Please enter a message (at least 10 characters).</div>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-submit" style="width: 100%;">Send Query</button>
+          <button type="submit" class="btn btn-primary btn-submit" style="width: 100%;">
+            <span class="btn-label">Send Query</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
 
           <div id="form-status" class="form-status"></div>
         </form>
+
+        <!-- Studio Address -->
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div class="contact-info-text">
+            <h4>Visit Our Office</h4>
+            <p>First Floor, B-230 KH NO 14/1,<br>Gali Number 4, Indira Vihar,<br>New Delhi, North East Delhi,<br>Delhi, 110094</p>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+          </div>
+          <div class="contact-info-text">
+            <h4>Follow Us</h4>
+            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <br>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Maps -->
+      <div class="map-container reveal" style="margin-bottom: var(--space-4xl);">
+        <iframe src="https://www.google.com/maps?q=First%20Floor%2C%20B-230%20KH%20NO%2014%2F1%2C%20Gali%20Number%204%2C%20Indira%20Vihar%2C%20New%20Delhi%2C%20North%20East%20Delhi%2C%20Delhi%2C%20110094%20India&z=15&hl=en&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Space Utilizers Studio Location"></iframe>
       </div>
     </div>
   </section>
@@ -216,7 +191,7 @@
         <div class="footer-social">
           <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
           <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
-          <a href="mailto:hello@spaceutilizers.com" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+          <a href="mailto:mayankorai1200@gmail.com" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
         </div>
       </div>
     </div>

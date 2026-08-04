@@ -1,0 +1,26 @@
+[build]
+  command   = "npm run build && cd server && npm install && npm run build"
+  publish   = "dist"
+  functions = "netlify/functions"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[functions."contact"]
+  included_files = ["server/dist/**/*.js", "server/.env"]
+
+[[headers]]
+  for = "/.netlify/functions/contact"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Accept, X-Requested-With"
+    X-Content-Type-Options = "nosniff"
+    Content-Type = "application/json; charset=utf-8"
+
+[[redirects]]
+  from = "/api/contact"
+  to   = "/.netlify/functions/contact"
+  status = 200
+  force = true
