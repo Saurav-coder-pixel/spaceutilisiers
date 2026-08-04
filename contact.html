@@ -72,7 +72,7 @@
           </div>
           <div class="contact-info-text">
             <h4>Call Us</h4>
-            <a href="tel:+919999999999">+91 99999 99999</a>
+            <a href="tel:+9198">+91 99999 99999</a>
             <p>Mon – Sat, 10:00 AM – 7:00 PM</p>
           </div>
         </div>
@@ -139,43 +139,12 @@
           </div>
 
           <div class="form-group">
-            <label for="name">Full Name <span class="required">*</span></label>
-            <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required aria-required="true">
-            <div class="form-error">This field is required.</div>
-          </div>
-
-          <div class="form-group">
             <label for="email">Email Address <span class="required">*</span></label>
-            <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" required aria-required="true">
+            <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" autocomplete="email" required aria-required="true">
             <div class="form-error">Please enter a valid email address.</div>
           </div>
 
-          <div class="form-group">
-            <label for="phone">Phone Number <span class="required">*</span></label>
-            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 99999 99999" required aria-required="true">
-            <div class="form-error">Please enter a valid phone number.</div>
-          </div>
-
-          <div class="form-group">
-            <label for="service">Interested Service</label>
-            <select id="service" name="service" class="form-control">
-              <option value="" disabled selected>Select a service</option>
-              <option value="Space Planning">Space Planning</option>
-              <option value="Interior Styling">Interior Styling</option>
-              <option value="Architectural Consultation">Architectural Consultation</option>
-              <option value="Renovation & Remodeling">Renovation & Remodeling</option>
-              <option value="Commercial Fit-Out">Commercial Fit-Out</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Your Message <span class="required">*</span></label>
-            <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project, space, or any questions you have..." required aria-required="true"></textarea>
-            <div class="form-error">This field is required.</div>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-submit" style="width: 100%;">Send Query</button>
+          <button type="submit" class="btn btn-primary btn-submit" style="width: 100%;">Send</button>
 
           <div id="form-status" class="form-status"></div>
         </form>

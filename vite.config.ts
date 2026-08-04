@@ -23,5 +23,8 @@ export default defineConfig({
   },
   server: {
     open: '/index.html',
+    proxy: {
+      '/api': 'http://localhost:3001',
+    },
   },
 });
