@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', (): void => {
   initMobileNav();
   initScrollReveal();
   highlightActiveNav();
+  initHeroMediaLoop();
 });
 
 /* --- Theme Toggle --- */
@@ -128,6 +129,102 @@ function initScrollReveal(): void {
   });
 
   reveals.forEach((el: Element): void => observer.observe(el));
+}
+
+/* --- Hero Media Loop --- */
+function initHeroMediaLoop(): void {
+  const heroMedia: HTMLElement | null = document.getElementById('hero-media');
+  if (!heroMedia) return;
+
+  const items: HTMLElement[] = Array.from(heroMedia.querySelectorAll<HTMLElement>('.hero-media__item'));
+  if (!items.length) return;
+
+  let currentIndex = 0;
+  let currentItemType: 'video' | 'image' = items[0]?.tagName.toLowerCase() === 'video' ? 'video' : 'image';
+  let timerId: number | undefined;
+
+  const showItem = (index: number): void => {
+    currentIndex = index;
+    currentItemType = items[index]?.tagName.toLowerCase() === 'video' ? 'video' : 'image';
+
+    items.forEach((item: HTMLElement, itemIndex: number): void => {
+      item.classList.toggle('hero-media__item--active', itemIndex === index);
+    });
+
+    if (currentItemType === 'video') {
+      const video = items[index] as HTMLVideoElement;
+      video.currentTime = 0;
+      video.play().catch((): void => undefined);
+    }
+  };
+
+  const advance = (): void => {
+    if (timerId) window.clearTimeout(timerId);
+
+    const nextIndex = currentIndex + 1 >= items.length ? 0 : currentIndex + 1;
+    showItem(nextIndex);
+
+    if (items[nextIndex]?.tagName.toLowerCase() === 'video') {
+      return;
+    }
+
+    timerId = window.setTimeout((): void => {
+      const nextVideoIndex = 0;
+      showItem(nextVideoIndex);
+      if (items[0]?.tagName.toLowerCase() === 'video') {
+        const video = items[0] as HTMLVideoElement;
+        video.currentTime = 0;
+        video.play().catch((): void => undefined);
+      }
+    }, 4000);
+  };
+
+  const handleVideoEnd = (): void => {
+    advance();
+  };
+
+  items.forEach((item: HTMLElement, index: number): void => {
+    if (item.tagName.toLowerCase() === 'video') {
+      const video = item as HTMLVideoElement;
+      video.addEventListener('ended', handleVideoEnd);
+      video.addEventListener('loadeddata', (): void => {
+        if (index === 0) {
+          showItem(0);
+        }
+      });
+    }
+  });
+
+  showItem(0);
+
+  items.forEach((item: HTMLElement, index: number): void => {
+    if (item.tagName.toLowerCase() !== 'video') {
+      const image = item as HTMLImageElement;
+      image.addEventListener('load', (): void => {
+        if (index === 0 || index === 1 || index === 2) {
+          const active = heroMedia.querySelector('.hero-media__item--active');
+          if (!active) {
+            showItem(0);
+          }
+        }
+      });
+    }
+  });
+
+  if (items[1]?.tagName.toLowerCase() !== 'video') {
+    timerId = window.setTimeout((): void => {
+      showItem(1);
+      timerId = window.setTimeout((): void => {
+        showItem(2);
+        timerId = window.setTimeout((): void => {
+          showItem(0);
+          const video = items[0] as HTMLVideoElement;
+          video.currentTime = 0;
+          video.play().catch((): void => undefined);
+        }, 4000);
+      }, 4000);
+    }, 4000);
+  }
 }
 
 /* --- Active Nav Link --- */
