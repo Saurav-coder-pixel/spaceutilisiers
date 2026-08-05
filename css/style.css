@@ -4,7 +4,7 @@
    =================================================================== */
 
 /* --- Google Fonts Import --- */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* ===================================================================
    1. CSS CUSTOM PROPERTIES (Theme Tokens)
@@ -965,8 +965,11 @@ section {
    =================================================================== */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
   gap: var(--space-2xl);
+  max-width: 960px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .team-member {
@@ -1003,6 +1006,84 @@ section {
   font-size: var(--font-size-sm);
   max-width: 300px;
   margin: 0 auto;
+}
+
+/* ===================================================================
+   LEADERSHIP CARDS (Premium two-column layout)
+   =================================================================== */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4xl);
+  align-items: stretch;
+}
+
+.lead-card {
+  display: flex;
+  gap: var(--space-3xl);
+  background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-elevated) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  padding: 0;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.28);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.lead-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 80px rgba(0,0,0,0.45);
+  border-color: var(--accent-border);
+}
+
+.lead-media {
+  flex: 1 1 48%;
+  min-width: 48%;
+  overflow: hidden;
+  display: block;
+}
+
+.lead-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow), filter var(--transition-slow);
+}
+
+.lead-card:hover .lead-media img {
+  transform: scale(1.06);
+}
+
+.lead-body {
+  flex: 1 1 52%;
+  padding: var(--space-3xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lead-body h3 {
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-size-2xl);
+}
+
+.lead-body p {
+  color: var(--text-secondary);
+  margin-top: var(--space-sm);
+}
+
+@media (max-width: 900px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+  .lead-card {
+    flex-direction: column;
+  }
+  .lead-media {
+    min-height: 360px;
+    min-width: 100%;
+  }
 }
 
 /* ===================================================================
@@ -1872,19 +1953,285 @@ select.form-control {
   }
 }
 
+/* ===================================================================
+   LEADERSHIP SECTION — Premium Card Design
+   =================================================================== */
+
+/* --- Section Header --- */
+.leadership-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.leadership-header .eyebrow {
+  justify-content: center;
+}
+
+.leadership-header .eyebrow::before {
+  display: none;
+}
+
+.eyebrow-decorated {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-lg);
+}
+
+.eyebrow-decorated::before,
+.eyebrow-decorated::after {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent));
+}
+
+.eyebrow-decorated::after {
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.leadership-header h2 {
+  font-size: var(--font-size-5xl);
+  margin-bottom: var(--space-md);
+}
+
+.leadership-header h2 span {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.leadership-diamond {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+  gap: 4px;
+}
+
+.leadership-diamond svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--accent);
+  opacity: 0.7;
+}
+
+.leadership-subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: var(--font-size-base);
+}
+
+/* --- Leadership Grid --- */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2xl);
+}
+
+/* --- Leadership Card --- */
+.lead-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: linear-gradient(145deg, rgba(30, 34, 39, 0.95), rgba(20, 23, 26, 0.98));
+  border: 1px solid var(--accent-border);
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  position: relative;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.lead-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(212, 162, 92, 0.05) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(212, 162, 92, 0.03) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.lead-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 30px rgba(212, 162, 92, 0.08);
+}
+
+/* --- Card Image --- */
+.lead-media {
+  position: relative;
+  overflow: hidden;
+  min-height: 480px;
+}
+
+.lead-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s ease;
+}
+
+.lead-card:hover .lead-media img {
+  transform: scale(1.03);
+}
+
+.lead-media::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(20, 23, 26, 0.5), transparent);
+  pointer-events: none;
+}
+
+/* --- Card Body --- */
+.lead-body {
+  padding: var(--space-2xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+/* Crown / Shield Icon */
+.lead-icon {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--accent-border);
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+  background: rgba(212, 162, 92, 0.08);
+}
+
+.lead-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+/* Role Label */
+.lead-label {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-sm);
+}
+
+/* Name */
+.lead-body h3 {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+/* Divider */
+.lead-divider {
+  width: 50px;
+  height: 1px;
+  background: var(--accent);
+  border: none;
+  margin-bottom: var(--space-md);
+}
+
+/* Title/Role */
+.lead-title {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+}
+
+/* Bio */
+.lead-bio {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  line-height: 1.75;
+  flex-grow: 1;
+  margin-bottom: var(--space-xl);
+}
+
+/* Signature */
+.lead-signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: var(--font-size-2xl);
+  color: var(--accent);
+  opacity: 0.85;
+  text-shadow: 0 0 10px rgba(212, 162, 92, 0.3);
+}
+
+/* --- Light Theme Overrides --- */
+[data-theme="light"] .lead-card {
+  background: linear-gradient(145deg, #ffffff, #f9f6f1);
+  border-color: var(--accent-border);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .lead-card::before {
+  background: linear-gradient(
+    180deg,
+    rgba(196, 146, 62, 0.04) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(196, 146, 62, 0.02) 100%
+  );
+}
+
+[data-theme="light"] .lead-card:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12), 0 0 30px rgba(196, 146, 62, 0.06);
+}
+
+[data-theme="light"] .lead-icon {
+  background: rgba(196, 146, 62, 0.08);
+}
+
+[data-theme="light"] .lead-signature {
+  text-shadow: 0 0 8px rgba(196, 146, 62, 0.2);
+}
+
 @media (max-width: 1024px) {
   h1 { font-size: var(--font-size-4xl); }
   h2 { font-size: var(--font-size-3xl); }
 
   .card-grid { grid-template-columns: repeat(2, 1fr); }
   .split-section { grid-template-columns: 1fr; gap: var(--space-2xl); }
-  .team-grid { grid-template-columns: repeat(3, 1fr); }
+  .team-grid { grid-template-columns: repeat(2, minmax(260px, 1fr)); }
   .service-header { grid-template-columns: 1fr; }
   .service-header.reverse { direction: ltr; }
   .service-steps { grid-template-columns: repeat(2, 1fr); }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .contact-info-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-links { gap: var(--space-2xl); }
+  .leadership-grid { grid-template-columns: 1fr; max-width: 680px; margin: 0 auto; }
+  .leadership-header h2 { font-size: var(--font-size-4xl); }
 }
 
 @media (max-width: 768px) {
@@ -1926,6 +2273,11 @@ select.form-control {
   .timeline-number { left: 0; }
 
   .filter-tabs { justify-content: center; }
+
+  .lead-card { grid-template-columns: 1fr; }
+  .lead-media { min-height: 320px; }
+  .leadership-header h2 { font-size: var(--font-size-3xl); }
+  .lead-body h3 { font-size: var(--font-size-2xl); }
 }
 
 @media (max-width: 480px) {
@@ -1934,4 +2286,9 @@ select.form-control {
 
   .pill { font-size: 0.65rem; padding: 6px 14px; }
   .btn { padding: 12px 24px; font-size: var(--font-size-xs); }
+  .lead-media { min-height: 260px; }
+  .lead-body { padding: var(--space-xl) var(--space-md); }
+  .lead-body h3 { font-size: var(--font-size-xl); }
+  .lead-signature { font-size: var(--font-size-lg); }
+  .leadership-header h2 { font-size: var(--font-size-2xl); }
 }
