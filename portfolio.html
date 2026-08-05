@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Space Utilizers portfolio — Founding projects and concept gallery showcasing our spatial design philosophy across living spaces, bedrooms, kitchens, and offices.">
-  <title>Portfolio — Space Utilizers</title>
+  <meta name="description" content="Space Utilizers Gallery — A world-class architectural portfolio showcasing our finest interior design and spatial transformations.">
+  <title>Gallery — Space Utilizers</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
 </head>
@@ -46,107 +46,55 @@
       <div class="breadcrumb">
         <a href="index.html">Home</a>
         <span class="sep">/</span>
-        <span>Portfolio</span>
+        <span>Gallery</span>
       </div>
-      <p class="eyebrow text-gold-glow-subtle">Our Work</p>
-      <h1>Founding Projects &<br><span class="serif-italic text-gold-glow">Concept Gallery</span></h1>
-      <p>A curated selection of flagship designs and spatial concepts from our founding portfolio — each project a demonstration of our design philosophy in action.</p>
+      <p class="eyebrow text-gold-glow-subtle">Our Portfolio</p>
+      <h1>Architectural <br><span class="serif-italic text-gold-glow">Gallery</span></h1>
+      <p>Explore our curated collection of spatial transformations — each image a testament to the harmony of form, function, and refined luxury.</p>
     </div>
   </section>
 
-  <!-- ===== PORTFOLIO ===== -->
-  <section id="portfolio-grid">
+  <!-- ===== MASONRY GALLERY ===== -->
+  <section id="gallery-section" class="gallery-section">
     <div class="container">
-      <!-- Filter Tabs -->
-      <div class="filter-tabs reveal">
-        <button class="filter-tab active" data-filter="all">All</button>
-        <button class="filter-tab" data-filter="living">Living</button>
-        <button class="filter-tab" data-filter="bedroom">Bedroom</button>
-        <button class="filter-tab" data-filter="kitchen">Kitchen</button>
-        <button class="filter-tab" data-filter="office">Office</button>
+      <div class="gallery-header reveal">
+        <div class="gallery-count">
+          <span class="gallery-count-number" id="gallery-total">0</span>
+          <span class="gallery-count-label">Projects Showcased</span>
+        </div>
+        <hr class="gold-divider">
       </div>
 
-      <div class="card-grid" id="portfolio-cards">
-        <!-- Project 1 -->
-        <div class="card-image reveal reveal-delay-1" data-category="living">
-          <img src="images/project-living.png" alt="The Horizon Loft — open plan living room" loading="lazy">
-          <div class="card-image-overlay">
-            <p style="color: #fff; font-size: var(--font-size-sm);">Redefining open-plan living with fluid spatial zones, natural materials, and intentional sight lines that connect every area.</p>
-          </div>
-          <div class="card-image-body">
-            <div class="card-tag text-gold-glow-subtle">Living Space</div>
-            <h3>The Horizon Loft</h3>
-            <p>Open-plan living redefined with fluid spatial zones and warm metallics.</p>
-          </div>
-        </div>
+      <div class="masonry-gallery" id="masonry-gallery">
+        <!-- Images are injected dynamically by gallery.ts -->
+      </div>
 
-        <!-- Project 2 -->
-        <div class="card-image reveal reveal-delay-2" data-category="bedroom">
-          <img src="images/project-bedroom.png" alt="Serenity Suite — luxury master bedroom" loading="lazy">
-          <div class="card-image-overlay">
-            <p style="color: #fff; font-size: var(--font-size-sm);">A sanctuary designed for restorative sleep — layered textiles, circadian-tuned lighting, and earth-tone material palettes.</p>
-          </div>
-          <div class="card-image-body">
-            <div class="card-tag text-gold-glow-subtle">Bedroom</div>
-            <h3>Serenity Suite</h3>
-            <p>A sanctuary of calm built on warm earth-tone palettes and layered textures.</p>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="card-image reveal reveal-delay-3" data-category="kitchen">
-          <img src="images/project-kitchen.png" alt="The Culinary Canvas — modern luxury kitchen" loading="lazy">
-          <div class="card-image-overlay">
-            <p style="color: #fff; font-size: var(--font-size-sm);">Culinary architecture at its finest — ergonomic zones, hidden storage, and a materials palette that balances luxury with durability.</p>
-          </div>
-          <div class="card-image-body">
-            <div class="card-tag text-gold-glow-subtle">Kitchen</div>
-            <h3>The Culinary Canvas</h3>
-            <p>Where function meets luxury in an ergonomically optimized culinary space.</p>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="card-image reveal" data-category="office">
-          <img src="images/project-office.png" alt="The Executive Alcove — private office design" loading="lazy">
-          <div class="card-image-overlay">
-            <p style="color: #fff; font-size: var(--font-size-sm);">An executive workspace designed for deep focus — acoustic isolation, biophilic elements, and a material language that commands authority.</p>
-          </div>
-          <div class="card-image-body">
-            <div class="card-tag text-gold-glow-subtle">Office</div>
-            <h3>The Executive Alcove</h3>
-            <p>A private workspace designed for clarity, focus, and commanding presence.</p>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="card-image reveal" data-category="living">
-          <img src="images/hero.png" alt="The Gallery Residence — luxury living concept" loading="lazy">
-          <div class="card-image-overlay">
-            <p style="color: #fff; font-size: var(--font-size-sm);">A residence conceived as a living gallery — where architectural drama and intimate comfort exist in perfect balance.</p>
-          </div>
-          <div class="card-image-body">
-            <div class="card-tag text-gold-glow-subtle">Living Space</div>
-            <h3>The Gallery Residence</h3>
-            <p>Architectural drama meets intimate comfort in a collector's living space.</p>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="card-image reveal" data-category="bedroom">
-          <img src="images/studio.png" alt="The Founder's Retreat — minimal bedroom concept" loading="lazy">
-          <div class="card-image-overlay">
-            <p style="color: #fff; font-size: var(--font-size-sm);">Minimalism as luxury — every object is curated, every surface intentional. A bedroom for those who value space over stuff.</p>
-          </div>
-          <div class="card-image-body">
-            <div class="card-tag text-gold-glow-subtle">Concept</div>
-            <h3>The Founder's Retreat</h3>
-            <p>Minimalism as luxury — curated objects, intentional surfaces, quiet power.</p>
-          </div>
-        </div>
+      <div class="gallery-loading" id="gallery-loading">
+        <div class="gallery-loading-spinner"></div>
+        <p>Loading gallery...</p>
       </div>
     </div>
   </section>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="gallery-lightbox-v2" id="gallery-lightbox-v2" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <div class="lightbox-backdrop"></div>
+    <button class="lightbox-close" aria-label="Close lightbox">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+    <div class="lightbox-image-wrapper">
+      <img class="lightbox-image" id="lightbox-image" src="" alt="Gallery image">
+    </div>
+    <div class="lightbox-counter" id="lightbox-counter">
+      <span id="lightbox-current">1</span> / <span id="lightbox-total">0</span>
+    </div>
+  </div>
 
   <!-- ===== CTA ===== -->
   <section class="cta-band">
@@ -205,6 +153,6 @@
   </a>
 
   <script type="module" src="/src/ts/main.ts"></script>
-  <script type="module" src="/src/ts/portfolio-filter.ts"></script>
+  <script type="module" src="/src/ts/gallery.ts"></script>
 </body>
 </html>
