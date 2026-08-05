@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Space Utilizers portfolio — Founding projects and concept gallery showcasing our spatial design philosophy across living spaces, bedrooms, kitchens, and offices.">
-  <title>Portfolio — Space Utilizers</title>
-
-  <link rel="icon" type="image/png" href="/assets/logo-BrGZZ66Q.png">
-  <script type="module" crossorigin src="/assets/portfolio-bL4kcj1A.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/main-7P06OQkc.js">
-  <link rel="stylesheet" crossorigin href="/assets/main-1mxtPwKd.css">
+  <meta name="description" content="Space Utilizers Gallery — A world-class architectural portfolio showcasing our finest interior design and spatial transformations.">
+  <title>Gallery — Space Utilizers</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <script type="module" crossorigin src="/assets/portfolio-BpwHPJuv.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/main-BUkFSk8y.js">
+  <link rel="stylesheet" crossorigin href="/assets/main-C3ARPcs2.css">
 </head>
 <body>
 
@@ -17,7 +16,7 @@
   <header class="header" role="banner">
     <div class="container">
       <a href="index.html" class="logo" aria-label="Space Utilizers Home">
-        <img src="/assets/logo-BrGZZ66Q.png" alt="Space Utilizers Logo" width="44" height="44">
+        <img src="images/logo.png" alt="Space Utilizers Logo" width="44" height="44">
         <span class="logo-text">Space <span class="text-gold-glow-subtle">Utilizers</span></span>
       </a>
       <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -49,107 +48,55 @@
       <div class="breadcrumb">
         <a href="index.html">Home</a>
         <span class="sep">/</span>
-        <span>Portfolio</span>
+        <span>Gallery</span>
       </div>
-      <p class="eyebrow text-gold-glow-subtle">Our Work</p>
-      <h1>Founding Projects &<br><span class="serif-italic text-gold-glow">Concept Gallery</span></h1>
-      <p>A curated selection of flagship designs and spatial concepts from our founding portfolio — each project a demonstration of our design philosophy in action.</p>
+      <p class="eyebrow text-gold-glow-subtle">Our Portfolio</p>
+      <h1>Architectural <br><span class="serif-italic text-gold-glow">Gallery</span></h1>
+      <p>Explore our curated collection of spatial transformations — each image a testament to the harmony of form, function, and refined luxury.</p>
     </div>
   </section>
 
-  <!-- ===== PORTFOLIO ===== -->
-  <section id="portfolio-grid">
+  <!-- ===== MASONRY GALLERY ===== -->
+  <section id="gallery-section" class="gallery-section">
     <div class="container">
-      <!-- Filter Tabs -->
-      <div class="filter-tabs reveal">
-        <button class="filter-tab active" data-filter="all">All</button>
-        <button class="filter-tab" data-filter="living">Living</button>
-        <button class="filter-tab" data-filter="bedroom">Bedroom</button>
-        <button class="filter-tab" data-filter="kitchen">Kitchen</button>
-        <button class="filter-tab" data-filter="office">Office</button>
+      <div class="gallery-header reveal">
+        <div class="gallery-count">
+          <span class="gallery-count-number" id="gallery-total">0</span>
+          <span class="gallery-count-label">Projects Showcased</span>
+        </div>
+        <hr class="gold-divider">
       </div>
 
-      <div class="card-grid" id="portfolio-cards">
-        <!-- Project 1 -->
-        <div class="card-image reveal reveal-delay-1" data-category="living">
-          <img src="/assets/project-living-CB7qb42K.png" alt="The Horizon Loft — open plan living room" loading="lazy">
-          <div class="card-image-overlay">
-            <p style="color: #fff; font-size: var(--font-size-sm);">Redefining open-plan living with fluid spatial zones, natural materials, and intentional sight lines that connect every area.</p>
-          </div>
-          <div class="card-image-body">
-            <div class="card-tag text-gold-glow-subtle">Living Space</div>
-            <h3>The Horizon Loft</h3>
-            <p>Open-plan living redefined with fluid spatial zones and warm metallics.</p>
-          </div>
-        </div>
+      <div class="masonry-gallery" id="masonry-gallery">
+        <!-- Images are injected dynamically by gallery.ts -->
+      </div>
 
-        <!-- Project 2 -->
-        <div class="card-image reveal reveal-delay-2" data-category="bedroom">
-          <img src="/assets/project-bedroom-J-_uUN4p.png" alt="Serenity Suite — luxury master bedroom" loading="lazy">
-          <div class="card-image-overlay">
-            <p style="color: #fff; font-size: var(--font-size-sm);">A sanctuary designed for restorative sleep — layered textiles, circadian-tuned lighting, and earth-tone material palettes.</p>
-          </div>
-          <div class="card-image-body">
-            <div class="card-tag text-gold-glow-subtle">Bedroom</div>
-            <h3>Serenity Suite</h3>
-            <p>A sanctuary of calm built on warm earth-tone palettes and layered textures.</p>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="card-image reveal reveal-delay-3" data-category="kitchen">
-          <img src="/assets/project-kitchen-DvItvf4g.png" alt="The Culinary Canvas — modern luxury kitchen" loading="lazy">
-          <div class="card-image-overlay">
-            <p style="color: #fff; font-size: var(--font-size-sm);">Culinary architecture at its finest — ergonomic zones, hidden storage, and a materials palette that balances luxury with durability.</p>
-          </div>
-          <div class="card-image-body">
-            <div class="card-tag text-gold-glow-subtle">Kitchen</div>
-            <h3>The Culinary Canvas</h3>
-            <p>Where function meets luxury in an ergonomically optimized culinary space.</p>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="card-image reveal" data-category="office">
-          <img src="/assets/project-office-B4mRK2tM.png" alt="The Executive Alcove — private office design" loading="lazy">
-          <div class="card-image-overlay">
-            <p style="color: #fff; font-size: var(--font-size-sm);">An executive workspace designed for deep focus — acoustic isolation, biophilic elements, and a material language that commands authority.</p>
-          </div>
-          <div class="card-image-body">
-            <div class="card-tag text-gold-glow-subtle">Office</div>
-            <h3>The Executive Alcove</h3>
-            <p>A private workspace designed for clarity, focus, and commanding presence.</p>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="card-image reveal" data-category="living">
-          <img src="/assets/hero-CuuEUoDq.png" alt="The Gallery Residence — luxury living concept" loading="lazy">
-          <div class="card-image-overlay">
-            <p style="color: #fff; font-size: var(--font-size-sm);">A residence conceived as a living gallery — where architectural drama and intimate comfort exist in perfect balance.</p>
-          </div>
-          <div class="card-image-body">
-            <div class="card-tag text-gold-glow-subtle">Living Space</div>
-            <h3>The Gallery Residence</h3>
-            <p>Architectural drama meets intimate comfort in a collector's living space.</p>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="card-image reveal" data-category="bedroom">
-          <img src="/assets/studio-DRJx2rPh.png" alt="The Founder's Retreat — minimal bedroom concept" loading="lazy">
-          <div class="card-image-overlay">
-            <p style="color: #fff; font-size: var(--font-size-sm);">Minimalism as luxury — every object is curated, every surface intentional. A bedroom for those who value space over stuff.</p>
-          </div>
-          <div class="card-image-body">
-            <div class="card-tag text-gold-glow-subtle">Concept</div>
-            <h3>The Founder's Retreat</h3>
-            <p>Minimalism as luxury — curated objects, intentional surfaces, quiet power.</p>
-          </div>
-        </div>
+      <div class="gallery-loading" id="gallery-loading">
+        <div class="gallery-loading-spinner"></div>
+        <p>Loading gallery...</p>
       </div>
     </div>
   </section>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="gallery-lightbox-v2" id="gallery-lightbox-v2" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <div class="lightbox-backdrop"></div>
+    <button class="lightbox-close" aria-label="Close lightbox">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+    <div class="lightbox-image-wrapper">
+      <img class="lightbox-image" id="lightbox-image" src="" alt="Gallery image">
+    </div>
+    <div class="lightbox-counter" id="lightbox-counter">
+      <span id="lightbox-current">1</span> / <span id="lightbox-total">0</span>
+    </div>
+  </div>
 
   <!-- ===== CTA ===== -->
   <section class="cta-band">
@@ -170,7 +117,7 @@
       <div class="footer-main">
         <div class="footer-brand">
           <a href="index.html" class="logo">
-            <img src="/assets/logo-BrGZZ66Q.png" alt="Space Utilizers" width="36" height="36">
+            <img src="images/logo.png" alt="Space Utilizers" width="36" height="36">
             <span class="logo-text">Space <span class="text-gold-glow-subtle">Utilizers</span></span>
           </a>
           <p class="tagline">Maximize Your Environment,<br>Design Your Potential</p>
@@ -195,7 +142,7 @@
       <div class="footer-bottom">
         <p>© 2024 Space Utilizers. All rights reserved.</p>
         <div class="footer-social">
-          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          <a href="https://instagram.com/spaceutiliser" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
           <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
           <a href="mailto:hello@spaceutilizers.com" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
         </div>
@@ -203,11 +150,9 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/9999999999" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/919871543683" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
-
-
-
+
 </body>
 </html>
