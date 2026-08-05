@@ -27,7 +27,7 @@ function getGalleryImageList(): string[] {
   // WA0100 - WA0122 (even numbers only)
   for (let i = 100; i <= 122; i += 2) {
     const num = String(i).padStart(4, '0');
-    images.push(`images/gallery/IMG-20260805-WA${num}.jpg`);
+    images.push(`/images/gallery/IMG-20260805-WA${num}.jpg`);
   }
 
   return images;
