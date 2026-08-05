@@ -1,3 +1,4 @@
+
 /* ===================================================================
    SPACE UTILIZERS — Gallery Module (TypeScript)
    Premium masonry gallery with lightbox, lazy loading, keyboard nav
@@ -20,7 +21,7 @@ function getGalleryImageList(): string[] {
   // WA0000 - WA0098 (sequential)
   for (let i = 0; i <= 98; i++) {
     const num = String(i).padStart(4, '0');
-    images.push(`images/gallery/IMG-20260805-WA${num}.jpg`);
+    images.push(`/images/gallery/IMG-20260805-WA${num}.jpg`);
   }
 
   // WA0100 - WA0122 (even numbers only)
