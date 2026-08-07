@@ -206,7 +206,7 @@ ${websiteUrl}
 <body>
   <div class="container">
     <div class="header">
-      <h1 class="brand">Space <span>Utilizers</span></h1>
+      <h1 class="brand">Space <span>Utilisers</span></h1>
       <p class="tagline">Maximize Your Environment, Design Your Potential</p>
     </div>
     <div class="body">
@@ -366,7 +366,7 @@ exports.handler = async (event, context) => {
     ip,
   };
 
-  const companyName = process.env.COMPANY_NAME || 'Space Utilizers';
+  const companyName = process.env.COMPANY_NAME || 'Space Utilisers';
   const adminEmail = process.env.ADMIN_EMAIL || 'sura767848@gmail.com';
   const replyToEmail = process.env.REPLY_TO_EMAIL || adminEmail;
   const fromEmail = process.env.FROM_EMAIL || adminEmail;
