@@ -24,8 +24,8 @@ export interface EmailProviderConfig {
   provider: 'smtp' | 'resend' | 'sendgrid';
 }
 
-const COMPANY_NAME = process.env.COMPANY_NAME || 'Space Utilizers';
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'hello@spaceutilizers.com';
+const COMPANY_NAME = process.env.COMPANY_NAME || 'Space Utilisers';
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'sura767848@gmail.com';
 const REPLY_TO_EMAIL = process.env.REPLY_TO_EMAIL || ADMIN_EMAIL;
 const FROM_EMAIL = process.env.FROM_EMAIL || `no-reply@spaceutilizers.com`;
 const FROM_NAME = process.env.FROM_NAME || COMPANY_NAME;
@@ -227,7 +227,7 @@ ${WEBSITE_URL}
 <body>
   <div class="container">
     <div class="header">
-      <h1 class="brand">Space <span>Utilizers</span></h1>
+      <h1 class="brand">Space <span>Utilisers</span></h1>
       <p class="tagline">Maximize Your Environment, Design Your Potential</p>
     </div>
     <div class="body">

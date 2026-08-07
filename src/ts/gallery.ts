@@ -74,13 +74,13 @@ function createGalleryItem(img: GalleryImage, index: number): HTMLElement {
   const item = document.createElement('div');
   item.className = 'masonry-item';
   item.setAttribute('data-index', String(index));
-  // Staggered animation delay (capped so it doesn't take forever for 111 images)
+  // Staggered animation delay (capped so it doesn't take forever for large galleries)
   const delay = Math.min(index * 0.04, 1.5);
   item.style.setProperty('--stagger-delay', `${delay}s`);
 
   const imgEl = document.createElement('img');
   imgEl.src = img.src;
-  imgEl.alt = `Space Utilizers Project ${index + 1}`;
+  imgEl.alt = `Space Utilisers Project ${index + 1}`;
   imgEl.loading = 'lazy';
   imgEl.decoding = 'async';
 
@@ -241,7 +241,7 @@ function updateLightboxImage(): void {
 
   setTimeout(() => {
     imgEl.src = galleryImages[currentLightboxIndex].src;
-    imgEl.alt = `Space Utilizers Project ${currentLightboxIndex + 1}`;
+    imgEl.alt = `Space Utilisers Project ${currentLightboxIndex + 1}`;
 
     imgEl.onload = () => {
       imgEl.classList.remove('lightbox-image--transitioning');

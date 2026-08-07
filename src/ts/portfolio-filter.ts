@@ -1,5 +1,5 @@
 /* ===================================================================
-   SPACE UTILIZERS — Portfolio Filter (TypeScript)
+   SPACE UTILISERS — Portfolio Filter (TypeScript)
    Filterable project gallery by space type with lightbox support
    =================================================================== */
 
@@ -43,7 +43,7 @@ function initPortfolioFilter(): void {
       const img: HTMLImageElement | null = card.querySelector('img');
       const title: HTMLElement | null = card.querySelector('h3');
       if (!img || !title) return;
-      openLightbox(img.src, title.textContent || 'Space Utilizers Project');
+      openLightbox(img.src, title.textContent || 'Space Utilisers Project');
     });
   });
 }
