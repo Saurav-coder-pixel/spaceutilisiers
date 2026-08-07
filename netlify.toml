@@ -7,8 +7,6 @@
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-[functions."contact"]
-  included_files = ["server/dist/**/*.js", "server/.env"]
 
 [[headers]]
   for = "/.netlify/functions/contact"
