@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Space Utilisers offers architectural consultation, concept development, feasibility planning, and material guidance.">
-  <title>Architecture — Space Utilisers</title>
+  <title>Architecture â€” Space Utilisers</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
 </head>
@@ -35,7 +35,11 @@
     <div class="mobile-overlay"></div>
   </header>
 
-  <section class="page-hero">
+  <section class="page-hero page-hero--with-bg">
+    <div class="page-hero__bg">
+      <img src="images/hero.png" alt="" aria-hidden="true" loading="eager">
+      <div class="page-hero__overlay"></div>
+    </div>
     <div class="container">
       <div class="breadcrumb">
         <a href="index.html">Home</a>
@@ -100,9 +104,82 @@
     </div>
   </section>
 
+  <!-- ===== ARCHITECTURE CATEGORIES ===== -->
+  <section id="categories" class="arch-categories">
+    <div class="container">
+      <div class="arch-categories__header reveal">
+        <p class="eyebrow text-gold-glow-subtle">Our Work</p>
+        <h2>Architecture<br><span class="serif-italic text-gold-glow">Portfolio</span></h2>
+        <p class="arch-categories__subtitle">Explore our design work across three distinct architectural domains â€” each project crafted with precision, vision, and an unwavering commitment to excellence.</p>
+      </div>
+
+      <div class="arch-categories__grid">
+        <!-- Residential -->
+        <a href="architecture/residential.html" class="arch-cat-card reveal" id="cat-residential">
+          <div class="arch-cat-card__media">
+            <img src="images/residential/IMG-20260805-WA0116.jpg" alt="Residential Architecture â€” Luxury Villa Design" loading="lazy">
+            <div class="arch-cat-card__overlay"></div>
+          </div>
+          <div class="arch-cat-card__content">
+            <span class="arch-cat-card__number text-gold-glow-subtle">01</span>
+            <h3 class="arch-cat-card__title">Residential<br><span class="serif-italic text-gold-glow">Architecture</span></h3>
+            <p class="arch-cat-card__desc">Bespoke homes and living spaces designed around how you live â€” from luxury villas to modern apartments, each crafted for comfort and character.</p>
+            <div class="arch-cat-card__footer">
+              <span class="arch-cat-card__count">82 Projects</span>
+              <span class="arch-cat-card__cta">
+                Explore
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Commercial -->
+        <a href="architecture/commercial.html" class="arch-cat-card reveal" id="cat-commercial">
+          <div class="arch-cat-card__media">
+            <img src="images/commercial/IMG-20260805-WA0070.jpg" alt="Commercial Architecture â€” Restaurant and CafÃ© Interior" loading="lazy">
+            <div class="arch-cat-card__overlay"></div>
+          </div>
+          <div class="arch-cat-card__content">
+            <span class="arch-cat-card__number text-gold-glow-subtle">02</span>
+            <h3 class="arch-cat-card__title">Commercial<br><span class="serif-italic text-gold-glow">Architecture</span></h3>
+            <p class="arch-cat-card__desc">Retail spaces, restaurants, and offices designed to elevate brand identity â€” where every detail reinforces business goals and visitor experience.</p>
+            <div class="arch-cat-card__footer">
+              <span class="arch-cat-card__count">12 Projects</span>
+              <span class="arch-cat-card__cta">
+                Explore
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Institutional -->
+        <a href="architecture/institutional.html" class="arch-cat-card reveal" id="cat-institutional">
+          <div class="arch-cat-card__media">
+            <img src="images/institutional/IMG-20260805-WA0048.jpg" alt="Institutional Architecture â€” Educational Space Design" loading="lazy">
+            <div class="arch-cat-card__overlay"></div>
+          </div>
+          <div class="arch-cat-card__content">
+            <span class="arch-cat-card__number text-gold-glow-subtle">03</span>
+            <h3 class="arch-cat-card__title">Institutional<br><span class="serif-italic text-gold-glow">Architecture</span></h3>
+            <p class="arch-cat-card__desc">Schools, clinics, and community spaces built for purpose â€” functional environments that inspire learning, wellness, and public engagement.</p>
+            <div class="arch-cat-card__footer">
+              <span class="arch-cat-card__count">17 Projects</span>
+              <span class="arch-cat-card__cta">
+                Explore
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-band">
     <div class="container reveal">
-      <h2>Let’s Shape<br><span class="serif-italic text-gold-glow">A Stronger Foundation</span></h2>
+      <h2>Let's Shape<br><span class="serif-italic text-gold-glow">A Stronger Foundation</span></h2>
       <p>Whether you're planning a fresh build or reimagining an existing property, we can guide the architectural direction with clarity.</p>
       <a href="contact.html" class="btn btn-primary">Speak With Our Studio</a>
       <div class="trust-checks">
@@ -127,7 +204,7 @@
             <h5>Studio</h5>
             <a href="about.html">About Us</a>
             <a href="architecture.html">Architecture</a>
-            <a href="portfolio.html">Gallery</a>
+            <a href="architecture.html#categories">Gallery</a>
             <a href="contact.html">Contact</a>
           </div>
           <div class="footer-links-col">
@@ -138,7 +215,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2024 Space Utilisers. All rights reserved.</p>
+        <p>Â© 2024 Space Utilisers. All rights reserved.</p>
         <div class="footer-social">
           <a href="https://instagram.com/spaceutiliser" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
           <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>

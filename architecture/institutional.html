@@ -3,25 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Space Utilisers offers construction oversight, contractor coordination, quality control, and project management for refined execution.">
-  <title>Construction â€” Space Utilisers</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="images/logo.png">
+  <meta name="description" content="Explore Space Utilisers' institutional architecture portfolio â€” schools, clinics, and community spaces built for purpose, learning, and public engagement.">
+  <title>Institutional Architecture â€” Space Utilisers</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../images/logo.png">
 </head>
 <body>
+
+  <!-- ===== HEADER ===== -->
   <header class="header" role="banner">
     <div class="container">
-      <a href="index.html" class="logo" aria-label="Space Utilisers Home">
-        <img src="images/logo.png" alt="Space Utilisers Logo" width="44" height="44">
+      <a href="../index.html" class="logo" aria-label="Space Utilisers Home">
+        <img src="../images/logo.png" alt="Space Utilisers Logo" width="44" height="44">
         <span class="logo-text">Space <span class="text-gold-glow-subtle">Utilisers</span></span>
       </a>
       <nav class="nav" role="navigation" aria-label="Main navigation">
         <ul class="nav-links">
-          <li><a href="architecture.html">ARCHITECTURE</a></li>
-          <li><a href="landscape.html">LANDSCAPE</a></li>
-          <li><a href="furniture.html">FURNITURE</a></li>
-          <li><a href="about.html">ABOUT&nbsp;US</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="../architecture.html">ARCHITECTURE</a></li>
+          <li><a href="../landscape.html">LANDSCAPE</a></li>
+          <li><a href="../furniture.html">FURNITURE</a></li>
+          <li><a href="../about.html">ABOUT&nbsp;US</a></li>
+          <li><a href="../contact.html">CONTACT</a></li>
         </ul>
         <div class="nav-actions">
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
@@ -35,85 +37,90 @@
     <div class="mobile-overlay"></div>
   </header>
 
-  <section class="page-hero">
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero page-hero--with-bg">
+    <div class="page-hero__bg">
+      <img src="../images/institutional/IMG-20260805-WA0048.jpg" alt="" aria-hidden="true" loading="eager">
+      <div class="page-hero__overlay"></div>
+    </div>
     <div class="container">
       <div class="breadcrumb">
-        <a href="index.html">Home</a>
+        <a href="../index.html">Home</a>
         <span class="sep">/</span>
-        <span>Construction</span>
+        <a href="../architecture.html">Architecture</a>
+        <span class="sep">/</span>
+        <span>Institutional</span>
       </div>
-      <p class="eyebrow text-gold-glow-subtle">Execution</p>
-      <h1>Thoughtful Delivery,<br><span class="serif-italic text-gold-glow">On Schedule</span></h1>
-      <p>We coordinate the build with precision, bringing your design to life through careful management, procurement support, and rigorous quality control.</p>
+      <p class="eyebrow text-gold-glow-subtle">Portfolio â€” 03</p>
+      <h1>Institutional<br><span class="serif-italic text-gold-glow">Architecture</span></h1>
+      <p>Schools, clinics, and community spaces built for purpose â€” functional environments that inspire learning, wellness, and public engagement.</p>
     </div>
   </section>
 
-  <section>
+  <!-- ===== BACK BUTTON ===== -->
+  <section class="gallery-back-strip">
     <div class="container">
-      <div class="split-section reveal">
-        <div class="split-text">
-          <p class="eyebrow text-gold-glow-subtle">Project Delivery</p>
-          <h2>From Drawings<br><span class="serif-italic text-gold-glow">To Reality</span></h2>
-          <p>Construction is where design intent meets real-world complexity. We manage this phase closely to protect both aesthetics and execution quality.</p>
-          <p>Our team works with trusted contractors to keep timelines realistic, decisions clear, and standards consistent from first fix to final handover.</p>
-          <a href="contact.html" class="btn btn-primary" style="margin-top: var(--space-lg);">Request a Project Estimate</a>
-        </div>
-        <div class="split-image">
-          <img src="images/project-kitchen.png" alt="Construction project planning" loading="lazy">
-        </div>
-      </div>
+      <a href="../architecture.html#categories" class="gallery-back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to Architecture
+      </a>
+      <span class="gallery-back-count"><span id="gallery-count">0</span> Projects</span>
     </div>
   </section>
 
-  <section class="section-alt">
+  <!-- ===== MASONRY GALLERY ===== -->
+  <section id="gallery-section" class="gallery-section">
     <div class="container">
-      <div class="reveal" style="text-align:center; margin-bottom:var(--space-3xl);">
-        <p class="eyebrow text-gold-glow-subtle" style="justify-content:center;">Delivery Process</p>
-        <h2>How We Guide Execution</h2>
+      <div class="masonry-gallery" id="masonry-gallery" data-category="institutional">
+        <!-- Images injected dynamically -->
       </div>
-      <div class="timeline reveal">
-        <div class="timeline-step">
-          <div class="timeline-number">01</div>
-          <h3>Planning & Scheduling</h3>
-          <p>We define a realistic build roadmap and coordinate milestones with the wider team.</p>
-        </div>
-        <div class="timeline-step">
-          <div class="timeline-number">02</div>
-          <h3>Contractor Coordination</h3>
-          <p>We align trades, vendors, and site decisions so every phase supports the design intent.</p>
-        </div>
-        <div class="timeline-step">
-          <div class="timeline-number">03</div>
-          <h3>Quality Control</h3>
-          <p>We review workmanship, materials, and installation details to ensure your standards are met.</p>
-        </div>
-        <div class="timeline-step">
-          <div class="timeline-number">04</div>
-          <h3>Handover</h3>
-          <p>Final inspections, finish detailing, and client walkthroughs complete the experience.</p>
-        </div>
+      <div class="gallery-loading" id="gallery-loading">
+        <div class="gallery-loading-spinner"></div>
+        <p>Loading gallery...</p>
       </div>
     </div>
   </section>
 
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <div class="lightbox-backdrop"></div>
+    <button class="lightbox-close" aria-label="Close lightbox">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+    <div class="lightbox-image-wrapper">
+      <img class="lightbox-image" id="lightbox-image" src="" alt="Gallery image">
+    </div>
+    <div class="lightbox-counter">
+      <span id="lightbox-current">1</span> / <span id="lightbox-total">0</span>
+    </div>
+  </div>
+
+  <!-- ===== CTA ===== -->
   <section class="cta-band">
     <div class="container reveal">
-      <h2>Need a Thoughtful<br><span class="serif-italic text-gold-glow">Build Partner?</span></h2>
-      <p>We can support your project with clear communication, attention to detail, and a refined sense of execution.</p>
-      <a href="contact.html" class="btn btn-primary">Request a Project Estimate</a>
+      <h2>Have a Space in Mind<br><span class="serif-italic text-gold-glow">You'd Like Transformed?</span></h2>
+      <p>Let's turn your vision into our next flagship project.</p>
+      <a href="../contact.html" class="btn btn-primary">Start a Conversation</a>
       <div class="trust-checks">
-        <span><span class="check text-gold-glow-subtle">âœ“</span> Transparent Process</span>
-        <span><span class="check text-gold-glow-subtle">âœ“</span> Detailed Coordination</span>
+        <span><span class="check text-gold-glow-subtle">âœ“</span> No Obligation</span>
+        <span><span class="check text-gold-glow-subtle">âœ“</span> Expert Advice</span>
       </div>
     </div>
   </section>
 
+  <!-- ===== FOOTER ===== -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-main">
         <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="Space Utilisers" width="36" height="36">
+          <a href="../index.html" class="logo">
+            <img src="../images/logo.png" alt="Space Utilisers" width="36" height="36">
             <span class="logo-text">Space <span class="text-gold-glow-subtle">Utilisers</span></span>
           </a>
           <p class="tagline">Maximize Your Environment,<br>Design Your Potential</p>
@@ -121,20 +128,19 @@
         <div class="footer-links">
           <div class="footer-links-col">
             <h5>Studio</h5>
-            <a href="about.html">About Us</a>
-            <a href="construction.html">Construction</a>
-            <a href="architecture.html#categories">Gallery</a>
-            <a href="contact.html">Contact</a>
+            <a href="../about.html">About Us</a>
+            <a href="../architecture.html">Architecture</a>
+            <a href="../contact.html">Contact</a>
           </div>
           <div class="footer-links-col">
             <h5>Resources</h5>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
+            <a href="../privacy.html">Privacy Policy</a>
+            <a href="../terms.html">Terms of Service</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>Â© 2024 Space Utilisers. All rights reserved.</p>
+        <p>&copy; 2024 Space Utilisers. All rights reserved.</p>
         <div class="footer-social">
           <a href="https://instagram.com/spaceutiliser" target="_blank" rel="noopener" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
           <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
@@ -149,5 +155,6 @@
   </a>
 
   <script type="module" src="/src/ts/main.ts"></script>
+  <script type="module" src="/src/ts/category-gallery.ts"></script>
 </body>
 </html>
